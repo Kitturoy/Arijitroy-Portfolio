@@ -46,19 +46,11 @@ const NavLogo = styled(LinkR)`
   }
 `;
 
-const MobileIcon = styled.div`
-  display: none;
-  @media screen and (max-width: 768px) {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 60%);
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: ${({ theme }) => theme.text_primary};
-}
-`
+const Span = styled.div`
+    padding: 0 4px;
+    font-weight: bold;
+    font-size: 18px;
+`;
 
 const NavItems = styled.ul`
   width: 100%;
@@ -89,18 +81,6 @@ const NavLink = styled.a`
   }
 `;
 
-const ButtonContainer = styled.div`
-  width: 80%;  
-  height: 100%;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  padding: 0 6px;
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
-`;
-
 const GitHubButton = styled.a`
   border: 1.8px solid ${({ theme }) => theme.primary};
   justify-content: center;
@@ -124,11 +104,32 @@ const GitHubButton = styled.a`
     }
 `;
 
-const Span = styled.div`
-    padding: 0 4px;
-    font-weight: bold;
-    font-size: 18px;
+const ButtonContainer = styled.div`
+  width: 80%;  
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 0 6px;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
+
+const MobileIcon = styled.div`
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: ${({ theme }) => theme.text_primary};
+  }
+`
+
 
 const MobileMenu = styled.div`
     display: flex;
@@ -147,9 +148,10 @@ const MobileMenu = styled.div`
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     opacity: ${({ open }) => (open ? '100%' : '0')};
     z-index: ${({ open }) => (open ? '1000' : '-1000')};
+
 `
 
-const MobileMenuLink = styled(LinkR)`
+const MobileMenuLink = styled.a`
   color: ${({ theme }) => theme.text_primary};
   font-weight: 500;
   cursor: pointer;
@@ -166,23 +168,22 @@ const MobileMenuLink = styled(LinkR)`
 
 
 
+
 const Navbar = () => {
   const [open, setOpen] = React.useState(false);
-  const theme = useTheme();
+  const theme = useTheme()
   return (
     <Nav>
       <NavContainer>
         <NavLogo to='/'>
-          <a style={{ display: "flex", alignItems: "center", color: "white",  marginBottom: '20;', cursor: 'pointer' }}>
+          <a style={{ display: "flex", alignItems: "center", color: "white", marginBottom: '20;', cursor: 'pointer' }}>
             <DiCssdeck size="3rem" /> <Span>Portfolio</Span>
           </a>
-          </NavLogo>
+        </NavLogo>
         <MobileIcon>
-        <FaBars 
-          onClick={() => {
-            setOpen (!open);
-          }}
-        />
+        <FaBars onClick={() => {
+          setOpen(!open)
+        }}/>
         </MobileIcon>
         <NavItems>
           <NavLink href="#about">About</NavLink>
@@ -194,11 +195,12 @@ const Navbar = () => {
         <ButtonContainer>
           <GitHubButton href={Bio.github} target="_blank">Github Profile</GitHubButton>
         </ButtonContainer>
-      </NavContainer>
-      {open && <MobileMenu open={open}><MobileMenuLink href="#about" onClick={() => {
+        {
+          open && 
+            <MobileMenu open={open}><MobileMenuLink href="#about" onClick={() => {
               setOpen(!open)
             }}>About</MobileMenuLink>
-            <MobileMenuLink href='#skills' onClick={() => {
+            <MobileMenuLink href="#skills" onClick={() => {
               setOpen(!open)
             }}>Skills</MobileMenuLink>
             <MobileMenuLink href='#experience' onClick={() => {
@@ -211,9 +213,11 @@ const Navbar = () => {
               setOpen(!open)
             }}>Education</MobileMenuLink>
             <GitHubButton style={{padding: '10px 16px',background: `${theme.primary}`, color: 'white',width: 'max-content'}} href={Bio.github} target="_blank">Github Profile</GitHubButton>
-            </MobileMenu>}
+            </MobileMenu>
+        }
+      </NavContainer>      
     </Nav>
   )
 }
 
-export default Navbar
+export default Navbar;
