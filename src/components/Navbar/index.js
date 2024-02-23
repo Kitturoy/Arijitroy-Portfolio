@@ -149,7 +149,7 @@ const MobileMenu = styled.div`
     z-index: ${({ open }) => (open ? '1000' : '-1000')};
 `
 
-const MobileMenuLink = styled(LinkR)`
+const MobileMenuLink = styled.a`
   color: ${({ theme }) => theme.text_primary};
   font-weight: 500;
   cursor: pointer;
