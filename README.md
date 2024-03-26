@@ -4,11 +4,11 @@ Welcome to my portfolio! This project showcases my skills, projects, and experie
 
 ### Weblink: [Live Website](https://arijitroy.netlify.app/)
 ## Some Images:
-<img width="450px;" src="https://github.com/Kitturoy/Arijitroy-Portfolio/assets/115938624/8f62ebcd-3769-4a3d-94e2-1640f33ab9ed"/>
-<img width="450px;" src="https://github.com/Kitturoy/Arijitroy-Portfolio/assets/115938624/18bd11bf-62f9-4d7e-97d1-34b1fc97e468"/>
-<img width="450px;" src="https://github.com/Kitturoy/Arijitroy-Portfolio/assets/115938624/8d7bc1ee-3953-4cda-9d1a-0631509cf405"/>
-<img width="450px;" src="https://github.com/Kitturoy/Arijitroy-Portfolio/assets/115938624/e4070fa7-51c0-4cc2-bb96-56760d83e6d7"/>
-<img width="450px;" src="https://github.com/Kitturoy/Arijitroy-Portfolio/assets/115938624/6dc0fc39-135b-4215-be62-afa1350ecb02"/>
+<img width="450px;" src="https://github.com/Kitturoy/Arijitroy-Portfolio/assets/115938624/810094a1-fdf4-4eba-8855-853e0077cb41"/>
+<img width="450px;" src="https://github.com/Kitturoy/Arijitroy-Portfolio/assets/115938624/4f6287cc-5664-4ad9-a5e7-9a83695a1b75"/>
+<img width="450px;" src="https://github.com/Kitturoy/Arijitroy-Portfolio/assets/115938624/22a18cdf-0031-4f63-8b99-419f75fbae82"/>
+<img width="450px;" src="https://github.com/Kitturoy/Arijitroy-Portfolio/assets/115938624/b8223d53-6d3d-45cb-9bba-11f7d70fe085"/>
+<img width="450px;" src="https://github.com/Kitturoy/Arijitroy-Portfolio/assets/115938624/770c86dc-9c6a-4a9e-acaa-6094253474cd"/>
 
 
 
